@@ -1,0 +1,13 @@
+lista = []
+contador = 0
+while True:
+  valores = int(input(f'digite para a posição {contador} da lista (-1 para sair): '))
+  contador += 1
+  if valores == -1:
+    print('o usuário saiu do programa')
+    break
+  lista.append(valores)
+opcao = int(input('qual elemento da lista você quer ou quer remover: '))
+print(f'\033[4;32;36mlista antiga: {lista}')
+del lista[opcao]
+print(f'\033[1;32;41mlista atual: {lista}\033[m')

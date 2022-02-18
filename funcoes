@@ -1,0 +1,29 @@
+numeros = [65, 5, 2, 3, 98, 77, 64]
+valor1 = int(input('(valor1): digite o valor a procurar: '))
+valor2 = int(input('(valor2): digite o valor a procurar: '))
+achouVALOR1 = False
+achouVALOR2 = False
+x = 0
+primeiro = 0
+while x < len(numeros):
+    if numeros[x] == valor1:
+        achouVALOR1 = True
+        if not achouVALOR2:
+            primeiro = 1
+    if numeros[x] == valor2:
+        achouVALOR2 = True
+        if not achouVALOR1: 
+         primeiro = 2
+    x += 1
+if achouVALOR1:
+    print(f'valor1: {valor1} encontrado')
+else:
+    print(f'valor1: {valor1} não encontrado')
+if achouVALOR2:
+    print(f'valor2: {valor2} encontrado')
+else:
+    print(f'valor2: {valor2} não encontrado')
+if primeiro == 1:
+    print('valor1: encontrado primeiro')
+elif primeiro == 2:
+    print('valor2: encontrado primeiro')
